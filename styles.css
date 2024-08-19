@@ -1,0 +1,140 @@
+/* Fuente pixelada */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Fondo de pantalla */
+body {
+    font-family: Arial, sans-serif;
+    background: url('fondo-de-pantalla.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.retro-header {
+    background-color: #111;
+    padding: 20px;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.retro-header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
+    margin: 0;
+    color: #ffcc00;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.retro-section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(34, 34, 34, 0.8); /* Fondo semi-transparente */
+    border: 2px solid #444;
+    border-radius: 10px;
+}
+
+.retro-section h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #00ff00;
+    text-shadow: 2px 2px #0000ff;
+    margin-bottom: 20px;
+}
+
+.game-card, .photo-item {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.game-card img, .photo-item img, .about-me-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game-card p, .photo-item p {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* Sección Sobre Mí */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-me-img {
+    width: 150px; /* Tamaño ajustable */
+    height: 150px; /* Tamaño ajustable */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Galería de Fotos */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-item {
+    background-color: #444;
+    border: 2px solid #666;
+}
+
+/* Sección Experiencia */
+.experience-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experience-img {
+    width: 200px; /* Tamaño ajustable */
+    height: auto; /* Mantener proporciones de la imagen */
+    border-radius: 10px;
+    background-color: #333; /* Color de fondo opcional si la imagen no cubre el área completamente */
+}
+
+/* Reproductor de audio */
+audio {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .retro-header h1 {
+        font-size: 2em;
+    }
+
+    .retro-section h2 {
+        font-size: 1.5em;
+    }
+
+    .game-card, .photo-item, .about-me-img {
+        width: calc(100% - 20px);
+        margin: 5px auto;
+    }
+
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-img {
+        width: 120px;
+        height: 120px;
+    }
+}
