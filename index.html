@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FELIZ ANIVERSARIO 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .mensaje {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: aparecer 2s ease-in-out;
+      max-width: 90%;
+      width: 600px;
+    }
+
+    .mensaje h1 {
+      font-size: 2em;
+      color: #d6336c;
+      margin-bottom: 20px;
+    }
+
+    .mensaje p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .galeria img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .corazones {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .corazon {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 24px;
+      animation: flotar 8s linear infinite;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="corazones">
+    <script>
+      for (let i = 0; i < 40; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("corazon");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDelay = Math.random() * 8 + "s";
+        heart.innerText = "❤️";
+        document.body.querySelector(".corazones").appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <div class="mensaje">
+    <h1>💌 <b>FELIZ ANIVERSARIO</b> 💌</h1>
+
+    <!-- Galería de imágenes -->
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+    </div>
+
+    <p>
+      <br><br>
+      <b>La mejor forma de decir que te amo es dedicandote en lo que trabaje espero que te guste :3</b>
+      <br><br>
+      Te Amo ❤️ De la forma mas sincera, emocionante que pueda demostrar, te amo mas de lo que crees.
+      <br><br>
+      Porque a pesar de las peleas, enojos, distancia, problemas, confusiones, mal entendidos y mil cosas más, sigues causandome esa misma felicidad que me causaste desde la primera vez que nos vimos, jamás creí llegarte a amar tanto, pensar en ti día y noche, esperar tus mensajes, no sabes lo que me causa mirarte, no sabes lo encantador que es estar a tu lado y que me tomes de la mano, estoy enamorado de tus gestos, de tus abrazos, de tus besos, pero sobre todo estoy enamorado de ti, y de como eres. ❤️
+      <br><br>
+      <b>De: </b>Wil 
+      <br><br>
+      <b>Para: </b>Mi Gorda ❤️
+    </p>
+  </div>
+</html>
